@@ -99,7 +99,7 @@ export function Game() {
 
   const handleShare = async () => {
     const today = formatDate(new Date());
-    const url = window.location.href;
+    const url = (window as { SHARE_URL?: string }).SHARE_URL ?? window.location.href;
     const text = `🎅 Santa's Flight ${today}\n${finalDistance}m travelled\n🥕 ${finalCarrots} carrots collected\n${url}`;
 
     try {
@@ -183,6 +183,7 @@ const styles: Record<string, React.CSSProperties> = {
     alignItems: 'center',
     justifyContent: 'center',
     pointerEvents: 'none',
+    paddingTop: '150px',
   },
   buttons: {
     display: 'flex',
