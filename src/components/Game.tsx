@@ -183,7 +183,7 @@ const styles: Record<string, React.CSSProperties> = {
     alignItems: 'center',
     justifyContent: 'center',
     pointerEvents: 'none',
-    paddingTop: '100px',
+    paddingTop: '150px',
   },
   buttons: {
     display: 'flex',
